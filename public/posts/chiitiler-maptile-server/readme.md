@@ -6,7 +6,7 @@ published: 2024-06-26
 ---
 ## はじめに
 
-![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/73197/f96c630b-42d9-96be-59f1-f0e8b8b2b6b9.png)*<https://maps.gsi.go.jp/development/siyou.html> より引用、地図タイルのイメージ*
+![image.png](xyztile.png)*<https://maps.gsi.go.jp/development/siyou.html> より引用、地図タイルのイメージ*
 
 地図タイルとは、ズームレベル（≒解像度）別にタイル状に分割された地図データのことです。例えば0/0/0という番地のタイルは`https://cyberjapandata.gsi.go.jp/xyz/std/0/0/0.png`で得られます。整数値3つからタイルの領域が一意になるのが、地図タイルの利点です。
 

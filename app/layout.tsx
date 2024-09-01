@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Alata } from 'next/font/google';
 import './globals.css';
 import LayoutHeader from './LayoutHeader';
 import LayoutFooter from './LayoutFooter';
 
-const inter = Inter({ subsets: ['latin'] });
+const font = Alata({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'MapLibre User Group Japan',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={inter.className}>
+            <body className={font.className}>
                 <div className="sticky top-0">
                     <LayoutHeader />
                 </div>

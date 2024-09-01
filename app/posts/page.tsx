@@ -1,28 +1,18 @@
-import { getAllSlug, getMarkdown } from '@/contents/utils';
-import Link from 'next/link';
+import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
+import Card from './Card';
 
-const formatDate = (date: Date) => {
-    // yyyy/mm/dd
-    return date.toISOString().split('T')[0].replace(/-/g, '/');
-};
-
-export default async function Page({ params }: { params: { slug: string } }) {
-    const slugs = getAllSlug('contents/posts');
+export default async function Page() {
+    const slugs = getAllSlug('public/posts');
     const markdowns = slugs.map((slug) => {
-        return getMarkdown(`contents/posts/${slug}/readme.md`);
+        return getMarkdown(`public/posts/${slug}/readme.md`);
     });
     return (
-        <div className="flex justify-center">
-            <div className="w-[800px]">
+        <main className="flex justify-center p-8">
+            <div className="w-[800px] flex flex-col gap-10">
                 {markdowns.map((md) => (
-                    <div key={md.data.slug} className="flex space-x-2">
-                        <span>{formatDate(md.data.publishedAt)}</span>
-                        <Link href={`/posts/${md.data.slug}`}>
-                            {md.data.title}
-                        </Link>
-                    </div>
+                    <Card post={md.data} content={md.content} />
                 ))}
             </div>
-        </div>
+        </main>
     );
 }

@@ -1,16 +1,11 @@
-import {
-    getAllSlug,
-    getMarkdown,
-    markdownToHtml,
-    preprocessHtml,
-} from '@/contents/utils';
+import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
 import './page.css';
 import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
 
 export async function generateStaticParams() {
-    const slugs = getAllSlug('contents/posts');
+    const slugs = getAllSlug('public/posts');
     const staticPaths = slugs.map((slug) => {
         return {
             slug,
@@ -22,9 +17,8 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const { content, data } = getMarkdown(
-        `contents/posts/${params.slug}/readme.md`,
+        `public/posts/${params.slug}/readme.md`,
     );
-    const htmlContent = preprocessHtml(await markdownToHtml(content));
     return (
         <div className="container">
             <h1 className="text-4xl font-bold">{data.title}</h1>
@@ -47,7 +41,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     </span>
                 ))}
             </div>
-            <MarkdownContent htmlContent={htmlContent} />
+            <MarkdownContent content={content} />
         </div>
     );
 }

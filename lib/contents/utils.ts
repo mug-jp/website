@@ -1,4 +1,5 @@
 import fs from 'fs';
+import type { Post } from './type';
 
 export const getAllSlug = (dirPath: string) => {
     return fs.readdirSync(dirPath).map((fileName) => {
@@ -8,7 +9,12 @@ export const getAllSlug = (dirPath: string) => {
 
 import matter from 'gray-matter';
 
-export const getMarkdown = (filePath: string) => {
+export const getMarkdown = (
+    filePath: string,
+): {
+    data: Post;
+    content: string;
+} => {
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
 

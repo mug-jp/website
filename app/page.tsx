@@ -7,15 +7,14 @@ import Image from 'next/image';
 export default function About() {
     return (
         <main className="p-8 space-y-20">
-            <div className="flex flex-col items-center justify-center gap-8">
-                <h1 className="text-4xl font-bold">About Us</h1>
+            <div className="flex flex-col items-center justify-center gap-2">
                 <Image
                     src={MugjpLLogo}
                     alt="MapLibre User Group Japan"
                     className="rounded-md"
                     width={480}
                 />
-                <div className="w-80% md:w-[480px]">
+                <div className="w-80% md:w-[480px] text-center">
                     MapLibre User Group Japan (MUG-JP) is founded to popularize
                     MapLibre Ecosystem in Japan in 2023.
                 </div>

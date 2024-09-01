@@ -1,9 +1,14 @@
+import ReactMarkdown from 'react-markdown';
 import './MarkdownContent.css';
 
 export default async function MarkdownContent({
-    htmlContent,
+    content,
 }: {
-    htmlContent: string;
+    content: string;
 }) {
-    return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+    return (
+        <div>
+            <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
+    );
 }
