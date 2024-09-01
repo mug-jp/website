@@ -1,0 +1,51 @@
+.container {
+  max-width: 750px;
+  padding: 12px 12px 0;
+  margin: 0 auto;
+
+  overflow-wrap: break-word;
+  word-break: break-all;
+
+  h2 {
+    padding-top: 1rem;
+    font-size: 21px;
+    font-weight: bold;
+    border-bottom: solid 1px gray;
+  }
+
+  h3 {
+    padding-top: 2rem;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  a {
+    color: #0af;
+    transition: opacity 0.1s linear;
+  }
+
+  a:hover {
+    opacity: 0.5;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 12px;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-left: 20px;
+    list-style-type: disc;
+
+    & li {
+      list-style-type: circle;
+    }
+  }
+}
