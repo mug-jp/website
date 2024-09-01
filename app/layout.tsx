@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import LayoutHeader from './LayoutHeader';
-
-export const runtime = 'edge';
+import LayoutFooter from './LayoutFooter';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,8 +19,11 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <body className={inter.className}>
-                <LayoutHeader />
-                {children}
+                <div className="sticky top-0">
+                    <LayoutHeader />
+                </div>
+                <div className="p-2">{children}</div>
+                <LayoutFooter />
             </body>
         </html>
     );

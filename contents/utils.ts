@@ -2,7 +2,7 @@ import fs from 'fs';
 
 export const getAllSlug = (dirPath: string) => {
     return fs.readdirSync(dirPath).map((fileName) => {
-        return fileName.replace(/\.md$/, '');
+        return fileName.replace(/\/readme.md$/, '');
     });
 };
 
@@ -17,7 +17,12 @@ export const getMarkdown = (filePath: string) => {
             title: data.title as string,
             tags: data.tags as string[],
             author: data.author as string,
-            publishedAt: data.publishedAt as string,
+            publishedAt: data.published as Date,
+            // slug = /path/to/file/content.md -> content
+            slug: filePath
+                .replace(/\/readme.md$/, '')
+                .split('/')
+                .pop()!,
         },
         content: content,
     };

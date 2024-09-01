@@ -1,6 +1,10 @@
-import { getMarkdown, markdownToHtml, preprocessHtml } from '@/contents/utils';
+import {
+    getAllSlug,
+    getMarkdown,
+    markdownToHtml,
+    preprocessHtml,
+} from '@/contents/utils';
 import './page.css';
-import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
 
@@ -18,4 +22,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <MarkdownContent htmlContent={htmlContent} />
         </div>
     );
+}
+
+export async function generateStaticParams() {
+    const slugs = getAllSlug('contents/events');
+    const staticPaths = slugs.map((slug) => {
+        return {
+            slug,
+        };
+    });
+
+    return staticPaths;
 }

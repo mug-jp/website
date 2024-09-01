@@ -1,4 +1,3 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import {
     getAllSlug,
     getMarkdown,
@@ -9,6 +8,17 @@ import './page.css';
 import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
+
+export async function generateStaticParams() {
+    const slugs = getAllSlug('contents/posts');
+    const staticPaths = slugs.map((slug) => {
+        return {
+            slug,
+        };
+    });
+
+    return staticPaths;
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const { content, data } = getMarkdown(
