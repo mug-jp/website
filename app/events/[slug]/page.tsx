@@ -3,7 +3,6 @@ import './page.css';
 
 import MarkdownContent from '@/components/MarkdownContent';
 import { Event } from '@/lib/type';
-import Link from 'next/link';
 import { Metadata } from 'next';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -12,13 +11,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
     return (
         <div className="container">
-            <h1 className="text-2xl md:text-4xl font-bold mb-2">
-                {data.title}
-            </h1>
+            <h1 className="text-xl md:text-4xl font-bold mb-2">{data.title}</h1>
             <div className="flex flex-col">
                 <span>Planned At: {formatDate(data.plannedDate)}</span>
                 <span>
-                    Connpass: <Link href={data.url}>{data.url}</Link>
+                    Connpass: <a href={data.url}>{data.url}</a>
                 </span>
             </div>
             <MarkdownContent content={content} />

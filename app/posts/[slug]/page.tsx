@@ -1,6 +1,5 @@
 import { formatDate, getAllSlug, getMarkdown } from '@/lib/utils';
 import './page.css';
-import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
 import { Post } from '@/lib/type';
@@ -12,15 +11,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
     return (
         <div className="container">
-            <h1 className="text-2xl md:text-4xl font-bold mb-2">
-                {data.title}
-            </h1>
+            <h1 className="text-xl md:text-4xl font-bold mb-2">{data.title}</h1>
             <div>
                 <span>
                     Author:{' '}
-                    <Link href={`https://x.com/${data.author}`}>
-                        @{data.author}
-                    </Link>
+                    <a href={`https://x.com/${data.author}`}>@{data.author}</a>
                 </span>
             </div>
             <div>
