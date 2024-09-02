@@ -1,16 +1,25 @@
 import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
 import Card from './Card';
+import { Post } from '@/lib/contents/type';
 
 export default async function Page() {
     const slugs = getAllSlug('public/posts');
-    const markdowns = slugs.map((slug) => {
-        return getMarkdown(`public/posts/${slug}/readme.md`);
-    });
+    const markdowns = slugs
+        .map((slug) => {
+            return getMarkdown<Post>(`public/posts/${slug}/readme.md`);
+        })
+        .sort((a, b) => {
+            return b.data.publishedAt.getTime() - a.data.publishedAt.getTime();
+        });
     return (
         <main className="flex justify-center p-8">
-            <div className="w-[800px] flex flex-col gap-10">
+            <div className="w-full md:w-[600px] flex flex-col gap-10">
                 {markdowns.map((md) => (
-                    <Card post={md.data} content={md.content} />
+                    <Card
+                        key={md.data.slug}
+                        post={md.data}
+                        content={md.content}
+                    />
                 ))}
             </div>
         </main>

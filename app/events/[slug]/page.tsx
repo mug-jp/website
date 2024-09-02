@@ -2,16 +2,17 @@ import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
 import './page.css';
 
 import MarkdownContent from '@/components/MarkdownContent';
+import { Event } from '@/lib/contents/type';
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const { content, data } = getMarkdown(
+    const { content, data } = getMarkdown<Event>(
         `public/events/${params.slug}/readme.md`,
     );
     return (
         <div className="container">
             <h1 className="text-4xl font-bold">{data.title}</h1>
             <div>
-                <span>Published at: {data.publishedAt.toString()}</span>
+                <span>Published at: {data.plannedDate.toString()}</span>
             </div>
             <MarkdownContent content={content} />
         </div>

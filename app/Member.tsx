@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import DayjournalIcon from '@/assets/dayjournal.jpg';
 import LogoX from '@/assets/logo_x.svg';
 import LogoGithub from '@/assets/logo_github.svg';
 

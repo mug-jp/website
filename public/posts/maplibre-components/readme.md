@@ -2,7 +2,7 @@
 title: MapLibre Styleの構成要素（タイル・フォント・アイコン）
 tags: [MapLibre, foss4g, Design]
 author: kanahiro_iguchi
-published: 2021-09-01
+publishedAt: 2021-09-01
 ---
 
 ## はじめに

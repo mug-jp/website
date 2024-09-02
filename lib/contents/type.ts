@@ -5,3 +5,9 @@ export type Post = {
     publishedAt: Date;
     slug: string;
 };
+
+export type Event = {
+    title: string;
+    plannedDate: Date;
+    slug: string;
+};

@@ -3,6 +3,9 @@ import KiguchiIcon from '@/assets/kiguchi.jpg';
 import MugjpLLogo from '@/assets/mugjp.png';
 import Member from './Member';
 import Image from 'next/image';
+import Link from 'next/link';
+import LogoGithub from '@/assets/logo_github.svg';
+import LogoConnpass from '@/assets/logo_connpass.png';
 
 export default function About() {
     return (
@@ -17,6 +20,24 @@ export default function About() {
                 <div className="w-80% md:w-[480px] text-center">
                     MapLibre User Group Japan (MUG-JP) is founded to popularize
                     MapLibre Ecosystem in Japan in 2023.
+                </div>
+                <div className="flex gap-2 justify-center items-center">
+                    <Link href="https://www.github.com/mug-jp">
+                        <Image
+                            src={LogoGithub}
+                            alt="GitHub"
+                            width={20}
+                            height={20}
+                        />
+                    </Link>
+                    <Link href="https://mug-jp.connpass.com/">
+                        <Image
+                            src={LogoConnpass}
+                            alt="Connpass"
+                            width={24}
+                            height={24}
+                        />
+                    </Link>
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-8">

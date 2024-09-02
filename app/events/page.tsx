@@ -1,5 +1,6 @@
+import { Event } from '@/lib/contents/type';
 import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
-import Link from 'next/link';
+import Card from './Card';
 
 const formatDate = (date: Date) => {
     // yyyy/mm/dd
@@ -8,19 +9,22 @@ const formatDate = (date: Date) => {
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const slugs = getAllSlug('public/events');
-    const markdowns = slugs.map((slug) => {
-        return getMarkdown(`public/events/${slug}/readme.md`);
-    });
+    const markdowns = slugs
+        .map((slug) => {
+            return getMarkdown<Event>(`public/events/${slug}/readme.md`);
+        })
+        .sort((a, b) => {
+            return b.data.plannedDate.getTime() - a.data.plannedDate.getTime();
+        });
     return (
         <main className="flex justify-center p-8">
-            <div className="w-[800px]">
+            <div className="w-full md:w-[600px] flex flex-col gap-4">
                 {markdowns.map((md) => (
-                    <div key={md.data.slug} className="flex space-x-2">
-                        <span>{formatDate(md.data.publishedAt)}</span>
-                        <Link href={`/events/${md.data.slug}`}>
-                            {md.data.title}
-                        </Link>
-                    </div>
+                    <Card
+                        key={md.data.slug}
+                        event={md.data}
+                        content={md.content}
+                    />
                 ))}
             </div>
         </main>

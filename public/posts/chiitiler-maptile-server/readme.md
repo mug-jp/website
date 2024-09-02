@@ -2,7 +2,7 @@
 title: chiitilerでつくる地図タイルサーバー
 tags: [TypeScript, Hono, foss4g, Node.js, lambda]
 author: kanahiro_iguchi
-published: 2024-06-26
+publishedAt: 2024-06-26
 ---
 ## はじめに
 

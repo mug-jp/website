@@ -3,6 +3,7 @@ import './page.css';
 import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
+import { Post } from '@/lib/contents/type';
 
 export async function generateStaticParams() {
     const slugs = getAllSlug('public/posts');
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const { content, data } = getMarkdown(
+    const { content, data } = getMarkdown<Post>(
         `public/posts/${params.slug}/readme.md`,
     );
     return (
