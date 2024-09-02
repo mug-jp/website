@@ -1,6 +1,6 @@
 ---
 title: MartinでPostGISからベクトルタイルを配信しよう
-tags: [MapLibre, PostGIS, Rust]
+tags: [Martin, Tile, PostGIS, Rust]
 author: kanahiro_iguchi
 publishedAt: 2023-12-05
 ---
