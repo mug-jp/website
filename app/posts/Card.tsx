@@ -23,7 +23,7 @@ export default function Card({
                 {post.tags.map((tag) => (
                     <span
                         key={tag}
-                        className="bg-gray-700 rounded-md px-1 text-sm"
+                        className="bg-gray-400 dark:bg-gray-600 rounded-md px-1 text-sm"
                     >
                         {tag}
                     </span>

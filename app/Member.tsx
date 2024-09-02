@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import LogoX from '@/assets/logo_x.svg';
-import LogoGithub from '@/assets/logo_github.svg';
+import LogoX from '@/components/LogoX';
+import LogoGithub from '@/components/LogoGithub';
 
 type Props = {
     name: string;
@@ -22,15 +22,10 @@ export default function Member({ name, icon, xUrl, githubUrl }: Props) {
             <span className="font-semibold">{name}</span>
             <div className="flex gap-4">
                 <Link href={xUrl}>
-                    <Image src={LogoX} alt="X" width={20} height={20} />
+                    <LogoX />
                 </Link>
                 <Link href={githubUrl}>
-                    <Image
-                        src={LogoGithub}
-                        alt="GitHub"
-                        width={20}
-                        height={20}
-                    />
+                    <LogoGithub />
                 </Link>
             </div>
         </div>

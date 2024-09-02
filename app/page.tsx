@@ -4,7 +4,7 @@ import MugjpLLogo from '@/assets/mugjp.png';
 import Member from './Member';
 import Image from 'next/image';
 import Link from 'next/link';
-import LogoGithub from '@/assets/logo_github.svg';
+import LogoGithub from '@/components/LogoGithub';
 import LogoConnpass from '@/assets/logo_connpass.png';
 import LogoQiita from '@/assets/logo_qiita.png';
 
@@ -24,12 +24,7 @@ export default function About() {
                 </div>
                 <div className="flex gap-4 justify-center items-center">
                     <Link href="https://www.github.com/mug-jp">
-                        <Image
-                            src={LogoGithub}
-                            alt="GitHub"
-                            width={20}
-                            height={20}
-                        />
+                        <LogoGithub />
                     </Link>
                     <Link href="https://mug-jp.connpass.com/">
                         <Image
