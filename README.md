@@ -16,6 +16,7 @@
 ---
 title: "MapLibre Meetup Japan #01"
 plannedDate: 2023-11-09
+url: https://mug-jp.connpass.com/event/293158/
 ---
 ```
 

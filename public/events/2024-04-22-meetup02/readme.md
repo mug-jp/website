@@ -1,6 +1,7 @@
 ---
 title: "MapLibre Meetup Japan #02"
 plannedDate: 2024-04-22
+url: https://mug-jp.connpass.com/event/315110/
 ---
 
 ## イベント概要

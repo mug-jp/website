@@ -9,5 +9,6 @@ export type Post = {
 export type Event = {
     title: string;
     plannedDate: Date;
+    url: string;
     slug: string;
 };
