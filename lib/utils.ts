@@ -27,3 +27,8 @@ export function getMarkdown<T>(filePath: string): {
         content: content,
     };
 }
+
+export const formatDate = (date: Date) => {
+    // yyyy/mm/dd
+    return date.toISOString().split('T')[0].replace(/-/g, '/');
+};

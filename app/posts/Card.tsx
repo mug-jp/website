@@ -1,4 +1,4 @@
-import type { Post } from '@/lib/contents/type';
+import type { Post } from '@/lib/type';
 import Link from 'next/link';
 
 const formatDate = (date: Date) => {

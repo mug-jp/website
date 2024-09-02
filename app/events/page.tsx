@@ -1,11 +1,6 @@
-import { Event } from '@/lib/contents/type';
-import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
+import { Event } from '@/lib/type';
+import { getAllSlug, getMarkdown } from '@/lib/utils';
 import Card from './Card';
-
-const formatDate = (date: Date) => {
-    // yyyy/mm/dd
-    return date.toISOString().split('T')[0].replace(/-/g, '/');
-};
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const slugs = getAllSlug('public/events');

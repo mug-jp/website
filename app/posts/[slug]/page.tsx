@@ -1,9 +1,9 @@
-import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
+import { formatDate, getAllSlug, getMarkdown } from '@/lib/utils';
 import './page.css';
 import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
-import { Post } from '@/lib/contents/type';
+import { Post } from '@/lib/type';
 
 export async function generateStaticParams() {
     const slugs = getAllSlug('public/posts');
@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
     return (
         <div className="container">
-            <h1 className="text-4xl font-bold">{data.title}</h1>
+            <h1 className="text-2xl md:text-4xl font-bold">{data.title}</h1>
             <div>
                 <span>
                     Author:{' '}
@@ -32,7 +32,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 </span>
             </div>
             <div>
-                <span>Published at: {data.publishedAt.toString()}</span>
+                <span>Published at: {formatDate(data.publishedAt)}</span>
             </div>
             <div className="space-x-1">
                 <span>Tags:</span>

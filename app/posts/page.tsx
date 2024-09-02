@@ -1,6 +1,6 @@
-import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
+import { getAllSlug, getMarkdown } from '@/lib/utils';
 import Card from './Card';
-import { Post } from '@/lib/contents/type';
+import { Post } from '@/lib/type';
 
 export default async function Page() {
     const slugs = getAllSlug('public/posts');

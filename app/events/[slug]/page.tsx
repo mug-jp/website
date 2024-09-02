@@ -1,8 +1,8 @@
-import { getAllSlug, getMarkdown } from '@/lib/contents/utils';
+import { formatDate, getAllSlug, getMarkdown } from '@/lib/utils';
 import './page.css';
 
 import MarkdownContent from '@/components/MarkdownContent';
-import { Event } from '@/lib/contents/type';
+import { Event } from '@/lib/type';
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const { content, data } = getMarkdown<Event>(
@@ -10,9 +10,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
     return (
         <div className="container">
-            <h1 className="text-4xl font-bold">{data.title}</h1>
+            <h1 className="text-2xl md:text-4xl font-bold">{data.title}</h1>
             <div>
-                <span>Published at: {data.plannedDate.toString()}</span>
+                <span>Planned at: {formatDate(data.plannedDate)}</span>
             </div>
             <MarkdownContent content={content} />
         </div>

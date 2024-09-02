@@ -1,4 +1,4 @@
-import { Event } from '@/lib/contents/type';
+import { Event } from '@/lib/type';
 import Link from 'next/link';
 
 const formatDate = (date: Date) => {
