@@ -13,16 +13,10 @@ type UseDarkMode = (isDark?: boolean) => {
     toggle: (isDark: boolean) => void;
 };
 
-// dark mode と light mode を切り替える
-export const useDarkMode: UseDarkMode = (isInitialDark = false) => {
-    const [isDarkMode, toggleTheme] = useState<boolean>(isInitialDark);
-    const toggle = useCallback((isDark: boolean) => {
-        if (typeof isDark === 'undefined') {
-            toggleTheme((state) => !state);
-            return;
-        }
-
-        toggleTheme(isDark);
+const useDarkMode: UseDarkMode = () => {
+    const [isDarkMode, toggleTheme] = useState<boolean>(true);
+    const toggle = useCallback((isDark?: boolean) => {
+        toggleTheme(isDark ?? !isDarkMode);
     }, []);
 
     useEffect(() => {

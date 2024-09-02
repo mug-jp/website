@@ -8,7 +8,7 @@ import LogoGithub from '@/components/LogoGithub';
 import LogoConnpass from '@/assets/logo_connpass.png';
 import LogoQiita from '@/assets/logo_qiita.png';
 
-export default function About() {
+export default function Page() {
     return (
         <main className="p-8 space-y-20">
             <div className="flex flex-col items-center justify-center gap-2">

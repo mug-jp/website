@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <body className={font.className}>
+            <body className={`${font.className} dark`}>
                 <div className="sticky top-0">
                     <LayoutHeader />
                 </div>
