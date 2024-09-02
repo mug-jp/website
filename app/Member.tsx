@@ -20,7 +20,7 @@ export default function Member({ name, icon, xUrl, githubUrl }: Props) {
                 height={240}
             />
             <span className="font-semibold">{name}</span>
-            <div className="flex space-x-2">
+            <div className="flex gap-4">
                 <Link href={xUrl}>
                     <Image src={LogoX} alt="X" width={20} height={20} />
                 </Link>

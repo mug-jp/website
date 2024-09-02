@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LogoGithub from '@/assets/logo_github.svg';
 import LogoConnpass from '@/assets/logo_connpass.png';
+import LogoQiita from '@/assets/logo_qiita.png';
 
 export default function About() {
     return (
@@ -21,7 +22,7 @@ export default function About() {
                     MapLibre User Group Japan (MUG-JP) is founded to popularize
                     MapLibre Ecosystem in Japan in 2023.
                 </div>
-                <div className="flex gap-2 justify-center items-center">
+                <div className="flex gap-4 justify-center items-center">
                     <Link href="https://www.github.com/mug-jp">
                         <Image
                             src={LogoGithub}
@@ -36,6 +37,14 @@ export default function About() {
                             alt="Connpass"
                             width={24}
                             height={24}
+                        />
+                    </Link>
+                    <Link href="https://qiita.com/organizations/mug-jp">
+                        <Image
+                            src={LogoQiita}
+                            alt="Qiita"
+                            width={20}
+                            height={20}
                         />
                     </Link>
                 </div>
