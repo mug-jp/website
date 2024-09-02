@@ -1,6 +1,6 @@
 ---
 title: MapLibre Styleの構成要素（タイル・フォント・アイコン）
-tags: [MapLibre, foss4g, Design]
+tags: [Style, Tile, Glyphs, Sprite]
 author: kanahiro_iguchi
 publishedAt: 2023-12-25
 ---
