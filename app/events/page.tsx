@@ -1,6 +1,12 @@
 import { Event } from '@/lib/type';
 import { getAllSlug, getMarkdown } from '@/lib/utils';
 import Card from './Card';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Events - MapLibre User Group Japan',
+    description: 'Events of MapLibre User Group Japan(MUG-JP).',
+};
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const slugs = getAllSlug('public/events');

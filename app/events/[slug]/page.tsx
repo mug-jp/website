@@ -4,6 +4,7 @@ import './page.css';
 import MarkdownContent from '@/components/MarkdownContent';
 import { Event } from '@/lib/type';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const { content, data } = getMarkdown<Event>(
@@ -34,4 +35,15 @@ export async function generateStaticParams() {
     });
 
     return staticPaths;
+}
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+    const { content, data } = getMarkdown<Event>(
+        `public/events/${params.slug}/readme.md`,
+    );
+
+    return {
+        title: `${data.title} - MapLibre User Group Japan`,
+        description: content.replaceAll('\n', ' ').slice(0, 200) + '...',
+    };
 }

@@ -4,17 +4,7 @@ import Link from 'next/link';
 
 import MarkdownContent from '@/components/MarkdownContent';
 import { Post } from '@/lib/type';
-
-export async function generateStaticParams() {
-    const slugs = getAllSlug('public/posts');
-    const staticPaths = slugs.map((slug) => {
-        return {
-            slug,
-        };
-    });
-
-    return staticPaths;
-}
+import { Metadata } from 'next';
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const { content, data } = getMarkdown<Post>(
@@ -47,4 +37,26 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <MarkdownContent content={content} />
         </div>
     );
+}
+
+export async function generateStaticParams() {
+    const slugs = getAllSlug('public/posts');
+    const staticPaths = slugs.map((slug) => {
+        return {
+            slug,
+        };
+    });
+
+    return staticPaths;
+}
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+    const { content, data } = getMarkdown<Post>(
+        `public/posts/${params.slug}/readme.md`,
+    );
+
+    return {
+        title: `${data.title} - MapLibre User Group Japan`,
+        description: content.replaceAll('\n', ' ').slice(0, 200) + '...',
+    };
 }
