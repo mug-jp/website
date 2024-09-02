@@ -19,7 +19,7 @@ export default function Member({ name, icon, xUrl, githubUrl }: Props) {
                 className="rounded-full"
                 height={200}
             />
-            <span className="font-semibold">{name}</span>
+            <span className="font-semibold text-sm md:text-base">{name}</span>
             <div className="flex gap-4">
                 <Link href={xUrl}>
                     <LogoX />
