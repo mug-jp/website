@@ -3,6 +3,7 @@ import './page.css';
 
 import MarkdownContent from '@/components/MarkdownContent';
 import { Event } from '@/lib/type';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -15,7 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <div className="flex flex-col">
                 <span>Planned At: {formatDate(data.plannedDate)}</span>
                 <span>
-                    Connpass: <a href={data.url}>{data.url}</a>
+                    Connpass: <Link href={data.url}>{data.url}</Link>
                 </span>
             </div>
             <MarkdownContent content={content} />
