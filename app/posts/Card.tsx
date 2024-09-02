@@ -16,9 +16,9 @@ export default function Card({
     return (
         <div className="flex flex-col gap-1">
             <span>{formatDate(post.publishedAt)}</span>
-            <Link href={`/posts/${post.slug}`} className="truncate">
+            <a href={`/posts/${post.slug}/`} className="truncate">
                 {post.title}
-            </Link>
+            </a>
             <div className="flex gap-1">
                 {post.tags.map((tag) => (
                     <span

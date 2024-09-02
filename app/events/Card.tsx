@@ -16,9 +16,9 @@ export default function Card({
     return (
         <div className="flex flex-col gap-1">
             <span>{formatDate(event.plannedDate)}</span>
-            <Link href={`/events/${event.slug}`} className="truncate">
+            <a href={`/events/${event.slug}/`} className="truncate">
                 {event.title}
-            </Link>
+            </a>
         </div>
     );
 }

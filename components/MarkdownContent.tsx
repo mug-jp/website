@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import './MarkdownContent.css';
 import hljs from 'highlight.js';
-import { ClassAttributes, HTMLAttributes } from 'react';
+import { ClassAttributes, HTMLAttributes, ImgHTMLAttributes } from 'react';
 
 type CodeBlockProps = ClassAttributes<HTMLElement> &
     HTMLAttributes<HTMLElement> &
@@ -23,20 +23,28 @@ const CodeBlock = ({ className, children }: CodeBlockProps) => {
     );
 };
 
+type ImgProps = ClassAttributes<HTMLImageElement> &
+    ImgHTMLAttributes<HTMLImageElement> &
+    ExtraProps;
+
+const Img = (props: ImgProps) => {
+    return (
+        <img src={props.src} alt={props.alt} loading="lazy" decoding="async" />
+    );
+};
+
 export default async function MarkdownContent({
     content,
 }: {
     content: string;
 }) {
     return (
-        <div>
-            <ReactMarkdown
-                remarkPlugins={[remarkFrontmatter, remarkGfm]}
-                rehypePlugins={[rehypeRaw]}
-                components={{ code: CodeBlock }}
-            >
-                {content}
-            </ReactMarkdown>
-        </div>
+        <ReactMarkdown
+            remarkPlugins={[remarkFrontmatter, remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={{ code: CodeBlock, img: Img }}
+        >
+            {content}
+        </ReactMarkdown>
     );
 }
