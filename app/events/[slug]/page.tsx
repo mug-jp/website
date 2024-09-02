@@ -11,9 +11,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
     return (
         <div className="container">
-            <h1 className="text-2xl md:text-4xl font-bold">{data.title}</h1>
+            <h1 className="text-2xl md:text-4xl font-bold mb-2">
+                {data.title}
+            </h1>
             <div className="flex flex-col">
-                <span>Planned at: {formatDate(data.plannedDate)}</span>
+                <span>Planned At: {formatDate(data.plannedDate)}</span>
                 <span>
                     Connpass: <Link href={data.url}>{data.url}</Link>
                 </span>

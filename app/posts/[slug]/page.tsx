@@ -22,7 +22,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
     return (
         <div className="container">
-            <h1 className="text-2xl md:text-4xl font-bold">{data.title}</h1>
+            <h1 className="text-2xl md:text-4xl font-bold mb-2">
+                {data.title}
+            </h1>
             <div>
                 <span>
                     Author:{' '}
@@ -32,7 +34,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 </span>
             </div>
             <div>
-                <span>Published at: {formatDate(data.publishedAt)}</span>
+                <span>Published At: {formatDate(data.publishedAt)}</span>
             </div>
             <div className="space-x-1">
                 <span>Tags:</span>
