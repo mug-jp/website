@@ -19,8 +19,9 @@ export default function Page() {
                     width={480}
                 />
                 <div className="w-80% md:w-[480px] text-center">
-                    MapLibre User Group Japan (MUG-JP) is founded to popularize
-                    MapLibre Ecosystem in Japan in 2023.
+                    MapLibre User Group Japan (MUG-JP)は、
+                    <Link href="https://maplibre.org/">MapLibre</Link>
+                    エコシステムの日本での普及を目指し2023年に設立されました。
                 </div>
                 <div className="flex gap-4 justify-center items-center">
                     <Link href="https://www.github.com/mug-jp">
