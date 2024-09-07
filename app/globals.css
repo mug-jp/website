@@ -27,6 +27,11 @@ body {
   transition: all 0.2s;
 }
 
+a:hover {
+  transition: all 0.2s;
+  opacity: 0.8;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
