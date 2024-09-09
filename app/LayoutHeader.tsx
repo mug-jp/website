@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import MapLibreIcon from '@/assets/icon.png';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 

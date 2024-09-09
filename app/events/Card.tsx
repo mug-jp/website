@@ -1,5 +1,5 @@
 import { Event } from '@/lib/type';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 const formatDate = (date: Date) => {
     // yyyy/mm/dd
@@ -16,9 +16,9 @@ export default function Card({
     return (
         <div className="flex flex-col gap-1">
             <span>{formatDate(event.plannedDate)}</span>
-            <a href={`/events/${event.slug}/`} className="truncate">
+            <Link href={`/events/${event.slug}/`} className="truncate">
                 {event.title}
-            </a>
+            </Link>
         </div>
     );
 }

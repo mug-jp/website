@@ -1,6 +1,6 @@
 import { formatDate, getAllSlug, getMarkdown } from '@/lib/utils';
 import './page.css';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 import MarkdownContent from '@/components/MarkdownContent';
 import { Post } from '@/lib/type';

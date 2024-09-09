@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Alata } from 'next/font/google';
+import { ViewTransitions } from 'next-view-transitions';
+
 import './globals.css';
 import LayoutHeader from './LayoutHeader';
 import LayoutFooter from './LayoutFooter';
@@ -17,14 +19,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ja">
-            <body className={`${font.className} dark`}>
-                <div className="sticky top-0">
-                    <LayoutHeader />
-                </div>
-                <div className="p-2">{children}</div>
-                <LayoutFooter />
-            </body>
-        </html>
+        <ViewTransitions>
+            <html lang="ja">
+                <body className={`${font.className} dark`}>
+                    <div className="sticky top-0">
+                        <LayoutHeader />
+                    </div>
+                    <div className="p-2">{children}</div>
+                    <LayoutFooter />
+                </body>
+            </html>
+        </ViewTransitions>
     );
 }

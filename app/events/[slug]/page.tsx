@@ -3,7 +3,7 @@ import './page.css';
 
 import MarkdownContent from '@/components/MarkdownContent';
 import { Event } from '@/lib/type';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { Metadata } from 'next';
 
 export default async function Page({ params }: { params: { slug: string } }) {

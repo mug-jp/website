@@ -3,7 +3,7 @@ import KiguchiIcon from '@/assets/kiguchi.jpg';
 import MugjpLLogo from '@/assets/mugjp.png';
 import Member from './Member';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import LogoGithub from '@/components/LogoGithub';
 import LogoConnpass from '@/assets/logo_connpass.png';
 import LogoQiita from '@/assets/logo_qiita.png';

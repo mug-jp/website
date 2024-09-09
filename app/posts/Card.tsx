@@ -1,5 +1,5 @@
 import type { Post } from '@/lib/type';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 
 const formatDate = (date: Date) => {
     // yyyy/mm/dd
@@ -16,9 +16,9 @@ export default function Card({
     return (
         <div className="flex flex-col gap-1">
             <span>{formatDate(post.publishedAt)}</span>
-            <a href={`/posts/${post.slug}/`} className="truncate">
+            <Link href={`/posts/${post.slug}/`} className="truncate">
                 {post.title}
-            </a>
+            </Link>
             <div className="flex gap-1">
                 {post.tags.map((tag) => (
                     <span
