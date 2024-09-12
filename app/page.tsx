@@ -53,12 +53,14 @@ export default function Page() {
                         icon={DayjournalIcon}
                         xUrl="https://x.com/dayjournal_nori"
                         githubUrl="https://github.com/dayjournal"
+                        linkedinUrl="https://www.linkedin.com/in/yasunori-kirimoto"
                     />
                     <Member
                         name="Kanahiro Iguchi"
                         icon={KiguchiIcon}
                         xUrl="https://x.com/kanahiro_iguchi"
                         githubUrl="https://github.com/Kanahiro"
+                        linkedinUrl="https://www.linkedin.com/in/kanahiro-iguchi-b78b96122/"
                     />
                 </div>
             </div>
