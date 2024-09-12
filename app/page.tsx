@@ -46,7 +46,7 @@ export default function Page() {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-8">
-                <h1 className="text-4xl font-bold">Member</h1>
+                <h1 className="text-4xl font-bold">Charter Member</h1>
                 <div className="grid grid-cols-2 gap-10">
                     <Member
                         name="Yasunori Kirimoto"
