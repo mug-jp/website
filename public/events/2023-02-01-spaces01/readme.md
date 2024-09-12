@@ -10,8 +10,8 @@ MapLibre User Group Japan はじめました
 
 ## スピーカー
 
-- Yasunori Kirimoto
-- Kanahiro Iguchi
+- [Yasunori Kirimoto](https://x.com/dayjournal_nori)
+- [Kanahiro Iguchi](https://x.com/kanahiro_iguchi)
 
 ## メニュー
 
@@ -26,4 +26,6 @@ MapLibre User Group Japan はじめました
 
 **47名**
 
-![代替テキスト](/assets/spaces/spaces_01.jpg))
+<br>
+
+![img](/images/spaces/spaces_01.jpg)
