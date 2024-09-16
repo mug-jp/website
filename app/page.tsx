@@ -7,6 +7,7 @@ import { Link } from 'next-view-transitions';
 import LogoGithub from '@/components/LogoGithub';
 import LogoConnpass from '@/assets/logo_connpass.png';
 import LogoQiita from '@/assets/logo_qiita.png';
+import LogoDevto from '@/components/LogoDevto';
 
 export default function Page() {
     return (
@@ -42,6 +43,9 @@ export default function Page() {
                             width={20}
                             height={20}
                         />
+                    </Link>
+                    <Link href="https://dev.to/mug-jp">
+                        <LogoDevto />
                     </Link>
                 </div>
             </div>
