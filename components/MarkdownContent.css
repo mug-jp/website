@@ -135,4 +135,16 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
     margin-left: 12px;
     list-style-position: inside;
   }
+
+  & table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  & th,
+  & td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
 }

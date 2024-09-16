@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <div className="flex flex-col">
                 <span>Planned At: {formatDate(data.plannedDate)}</span>
                 <span>
-                    Connpass: <Link href={data.url}>{data.url}</Link>
+                    Link: <Link href={data.url}>{data.url}</Link>
                 </span>
             </div>
             <MarkdownContent content={content} />

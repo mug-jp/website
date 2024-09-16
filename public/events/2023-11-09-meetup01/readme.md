@@ -49,9 +49,13 @@ MUG-JP Official Web Site
 
 株式会社 Geolonia エンジニア (フロント、新規事業開発担当) | MapLibre GL JS コントリビューター |国連ベクトルタイルツールキット Charites コントリビューター
 
+<br>
+
 ---
 
-<img src="https://pbs.twimg.com/profile_images/1702702747693559808/gUvEujpu_400x400.jpg" width="150px">
+<br>
+
+<img src="https://pbs.twimg.com/profile_images/1764867955056377856/JTSZdusm_400x400.jpg" width="150px">
 
 #### MapLibre GL JSの普及活動と初心者へのTips
 
@@ -61,7 +65,11 @@ OSGeo日本支部
 
 SIerではたらくシステムエンジニアです。 2社で副業しており、OSGeo日本支部の理事をしています。マップライブラリを使ったフロントエンド開発が好きです。
 
+<br>
+
 ---
+
+<br>
 
 <img src="https://avatars.githubusercontent.com/u/20744195?v=4" width="150px">
 
@@ -73,7 +81,11 @@ MapLibre User Group Japan, MIERUNE Inc.
 
 GIS/OSS Enthusiast | MapLibre Voting Member | <a href="https://www.shuwasystem.co.jp/book/9784798068923.html">位置エン本</a>著者
 
+<br>
+
 ---
+
+<br>
 
 <img src="https://pbs.twimg.com/profile_images/15935212/mixi_image_1_400x400.jpg" width="150px">
 
@@ -85,6 +97,8 @@ GIS/OSS Enthusiast | MapLibre Voting Member | <a href="https://www.shuwasystem.c
 
 日本UNIXユーザ会副会長、OSGeo日本支部理事、OpenStreetMap Foundation Japan理事。地図は読めないけど地図アプリは作れるUNIX系エンジニアです。
 
+<br>
+
 ---
 
 ## 運営メンバー
@@ -93,24 +107,26 @@ GIS/OSS Enthusiast | MapLibre Voting Member | <a href="https://www.shuwasystem.c
 
 **Yasunori Kirimoto**
 
-Geospatial Architect
-MapLibre Voting Member
+Geospatial Architect  
+MapLibre Voting Member  
 
-Twitter: [@dayjournal_nori](https://twitter.com/dayjournal_nori)
-GitHub: [@dayjournal](https://github.com/dayjournal)
-LinkedIn: [@yasunori-kirimoto](https://www.linkedin.com/in/yasunori-kirimoto)
+Twitter: [@dayjournal_nori](https://twitter.com/dayjournal_nori)  
+GitHub: [@dayjournal](https://github.com/dayjournal)  
+LinkedIn: [@yasunori-kirimoto](https://www.linkedin.com/in/yasunori-kirimoto)  
+
+<br>
 
 <img src="https://avatars.githubusercontent.com/u/20744195?v=4" width="150px">
 
 **Kanahiro Iguchi**
 
-GIS/OSS Enthusiast
-MapLibre Voting Member
-<a href="https://www.shuwasystem.co.jp/book/9784798068923.html">位置エン本</a>著者
+GIS/OSS Enthusiast  
+MapLibre Voting Member  
+<a href="https://www.shuwasystem.co.jp/book/9784798068923.html">位置エン本</a>著者  
 
-Twitter: [@kanahiro_iguchi](https://twitter.com/kanahiro_iguchi)
-GitHub: [@Kanahiro](https://github.com/Kanahiro)
-LinkedIn: [@kanahiro-iguchi](https://www.linkedin.com/in/kanahiro-iguchi-b78b96122/)
+Twitter: [@kanahiro_iguchi](https://twitter.com/kanahiro_iguchi)  
+GitHub: [@Kanahiro](https://github.com/Kanahiro)  
+LinkedIn: [@kanahiro-iguchi](https://www.linkedin.com/in/kanahiro-iguchi-b78b96122/)  
 
 ## 参加者想定
 
@@ -129,3 +145,7 @@ Zoom (オンライン)
 ## 参加費
 
 無料
+
+## 参加者
+
+**102名**

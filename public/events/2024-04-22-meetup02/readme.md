@@ -41,7 +41,7 @@ MUG-JP Official Web Site
 
 <img src="https://avatars.githubusercontent.com/u/7871642?v=4" width="150px">
 
-### MapLibreとAmazon Location Service
+#### MapLibreとAmazon Location Service
 
 **[Yasunori Kirimoto](https://twitter.com/dayjournal_nori)**
 
@@ -51,11 +51,15 @@ MapLibre User Group Japan
 
 MapLibre User Group Japan | Amplify Japan User Group | Notion Sapporo | MapLibre Voting Member | OSGeo Charter Member | AWS DevTools Hero
 
+<br>
+
 ---
+
+<br>
 
 <img src="https://avatars.githubusercontent.com/u/20744195?v=4" width="150px">
 
-### MapLibre Nativeでつくるラスタータイルサーバー
+#### MapLibre Nativeでつくるラスタータイルサーバー
 
 **Kanahiro Iguchi**
 
@@ -63,11 +67,15 @@ GIS/OSS Enthusiast
 MapLibre Voting Member
 OSGeo Charter Member
 
+<br>
+
 ---
+
+<br>
 
 <img src="https://pbs.twimg.com/profile_images/1447928078525685767/hXdnZVxc_400x400.jpg" width="150px">
 
-### FOSS4Gのおかげで点群データと仲良くなれた話
+#### FOSS4Gのおかげで点群データと仲良くなれた話
 
 **[塩飽 洋平 (shi-works)](https://twitter.com/shi__works)**
 
@@ -75,17 +83,23 @@ OSGeo Charter Member
 
 普段はフロントエンドエンジニアをしています。最近はオープンデータ×MapLibre GL JSでいろいろ作っています。
 
+<br>
+
 ---
+
+<br>
 
 <img src="https://pbs.twimg.com/profile_images/1502997062186545158/8xHlQL1c_400x400.jpg" width="150px">
 
-### 新宿ダンジョンを可視化してみた
+#### 新宿ダンジョンを可視化してみた
 
 **[小松 聖](https://twitter.com/satoshi7190)**
 
 株式会社MIERUNE
 
 動くコンテンツが好きです
+
+<br>
 
 ---
 
@@ -95,24 +109,26 @@ OSGeo Charter Member
 
 **Yasunori Kirimoto**
 
-Geospatial Architect
-MapLibre Voting Member
+Geospatial Architect  
+MapLibre Voting Member  
 
-Twitter: [@dayjournal_nori](https://twitter.com/dayjournal_nori)
-GitHub: [@dayjournal](https://github.com/dayjournal)
-LinkedIn: [@yasunori-kirimoto](https://www.linkedin.com/in/yasunori-kirimoto)
+Twitter: [@dayjournal_nori](https://twitter.com/dayjournal_nori)  
+GitHub: [@dayjournal](https://github.com/dayjournal)  
+LinkedIn: [@yasunori-kirimoto](https://www.linkedin.com/in/yasunori-kirimoto)  
+
+<br>
 
 <img src="https://avatars.githubusercontent.com/u/20744195?v=4" width="150px">
 
 **Kanahiro Iguchi**
 
-GIS/OSS Enthusiast
-MapLibre Voting Member
-<a href="https://www.shuwasystem.co.jp/book/9784798068923.html">位置エン本</a>著者
+GIS/OSS Enthusiast  
+MapLibre Voting Member  
+<a href="https://www.shuwasystem.co.jp/book/9784798068923.html">位置エン本</a>著者  
 
-Twitter: [@kanahiro_iguchi](https://twitter.com/kanahiro_iguchi)
-GitHub: [@Kanahiro](https://github.com/Kanahiro)
-LinkedIn: [@kanahiro-iguchi](https://www.linkedin.com/in/kanahiro-iguchi-b78b96122/)
+Twitter: [@kanahiro_iguchi](https://twitter.com/kanahiro_iguchi)  
+GitHub: [@Kanahiro](https://github.com/Kanahiro)  
+LinkedIn: [@kanahiro-iguchi](https://www.linkedin.com/in/kanahiro-iguchi-b78b96122/)  
 
 ## 参加者想定
 
@@ -131,3 +147,7 @@ Zoom (オンライン)
 ## 参加費
 
 無料
+
+## 参加者
+
+**110名**

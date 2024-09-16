@@ -29,7 +29,7 @@ type ImgProps = ClassAttributes<HTMLImageElement> &
 
 const Img = (props: ImgProps) => {
     return (
-        <img src={props.src} alt={props.alt} loading="lazy" decoding="async" />
+        <img {...props} loading="lazy" decoding="async" />
     );
 };
 
