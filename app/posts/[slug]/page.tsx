@@ -12,12 +12,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	return (
 		<div className="container">
 			<h1 className="text-xl md:text-4xl font-bold mb-2">{data.title}</h1>
-			<div>
-				<span>
-					Author:{' '}
-					<Link href={`https://x.com/${data.author}`}>@{data.author}</Link>
-				</span>
-			</div>
+			{data.author && (
+				<div>
+					<span>
+						Author:
+						<Link href={`https://x.com/${data.author}`}>@{data.author}</Link>
+					</span>
+				</div>
+			)}
 			<div>
 				<span>Published At: {formatDate(data.publishedAt)}</span>
 			</div>

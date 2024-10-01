@@ -12,12 +12,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	return (
 		<div className="container">
 			<h1 className="text-xl md:text-4xl font-bold mb-2">{data.title}</h1>
-			<div className="flex flex-col">
-				<span>Planned At: {formatDate(data.plannedDate)}</span>
-				<span>
-					Link: <Link href={data.url}>{data.url}</Link>
-				</span>
-			</div>
+			{data.url && (
+				<div className="flex flex-col">
+					<span>Planned At: {formatDate(data.plannedDate)}</span>
+
+					<span>
+						Link: <Link href={data.url}>{data.url}</Link>
+					</span>
+				</div>
+			)}
 			<MarkdownContent content={content} />
 		</div>
 	);
