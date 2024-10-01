@@ -45,5 +45,9 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 	return {
 		title: `${data.title} - MapLibre User Group Japan`,
 		description: content.replaceAll('\n', ' ').slice(0, 200) + '...',
+		twitter: {
+			card: 'summary',
+			site: '@kanahiro_iguchi',
+		},
 	};
 }
