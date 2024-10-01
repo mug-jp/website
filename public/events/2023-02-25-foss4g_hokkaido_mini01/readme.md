@@ -6,7 +6,7 @@ url: https://foss4ghkdmini01.peatix.com
 
 <br>
 
-![img](/images/presentation/foss4g_hokkaido_mini01_01.jpg)
+![img](./foss4g_hokkaido_mini01_01.jpg)
 
 ## タイトル
 
@@ -18,4 +18,4 @@ MapLibre User Group Japan（MUG-JP）を発足しました！
 
 ## 発表資料
 
-[![img](/images/presentation/foss4g_hokkaido_mini01_02.png)](https://docs.google.com/presentation/d/1OyEjpKRqqXJ2xjN8X50Q6oIStZInn_0e5KUBD-GycyI/edit?usp=sharing)
+[![img](./foss4g_hokkaido_mini01_02.png)](https://docs.google.com/presentation/d/1OyEjpKRqqXJ2xjN8X50Q6oIStZInn_0e5KUBD-GycyI/edit?usp=sharing)
