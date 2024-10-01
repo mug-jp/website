@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Alata, Zen_Kaku_Gothic_New } from 'next/font/google';
 import { ViewTransitions } from 'next-view-transitions';
 
 import './globals.css';
