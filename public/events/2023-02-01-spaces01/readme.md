@@ -28,4 +28,4 @@ MapLibre User Group Japan はじめました
 
 <br>
 
-![img](/images/spaces/spaces_01.jpg)
+![img](./spaces_01.jpg)
