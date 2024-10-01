@@ -30,3 +30,7 @@ author: kanahiro_iguchi # Xのユーザー名
 publishedAt: 2024-06-26
 ---
 ```
+
+## インフラとドメイン
+
+- @kanahiro_iguchi が管理するCloudflareアカウント下のドメイン・Pagesで動作しています
