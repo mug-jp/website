@@ -8,6 +8,10 @@ import LayoutFooter from './LayoutFooter';
 export const metadata: Metadata = {
 	title: 'MapLibre User Group Japan',
 	description: 'The website of MapLibre User Group Japan(MUG-JP).',
+	twitter: {
+		card: 'summary',
+		site: '@kanahiro_iguchi',
+	},
 };
 
 export default function RootLayout({
