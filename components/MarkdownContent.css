@@ -137,8 +137,7 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
   }
 
   & table {
-    border-collapse: collapse;
-    width: 100%;
+    font-size: small;
   }
 
   & th,
