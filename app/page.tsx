@@ -60,7 +60,7 @@ export default function Page() {
 			</div>
 			<div className="flex flex-col items-center justify-center gap-y-8">
 				<h1 className="text-3xl font-bold">Contributors</h1>
-				<div className="w-full max-w-[800px] h-[600px]">
+				<div className="w-full max-w-[800px] h-[400px] md:h-[600px]">
 					<iframe
 						className="w-full h-full rounded-md"
 						src="https://contributors.mug-jp.org/"
