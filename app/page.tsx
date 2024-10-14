@@ -11,7 +11,7 @@ import LogoDevto from '@/components/LogoDevto';
 
 export default function Page() {
 	return (
-		<main className="p-8 space-y-20">
+		<main className="p-4 md:p-8 space-y-20">
 			<div className="flex flex-col items-center justify-center gap-2">
 				<Image
 					src={MugjpLLogo}
