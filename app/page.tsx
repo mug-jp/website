@@ -63,10 +63,10 @@ export default function Page() {
 				<div className="w-full max-w-[800px] h-[400px] md:h-[600px]">
 					<iframe
 						className="w-full h-full rounded-md"
-						src="https://contributors.mug-jp.org/"
+						src="https://contributors.mug-jp.org/?logo=false"
 					></iframe>
 					<Link
-						href="https://contributors.mug-jp.org/"
+						href="https://contributors.mug-jp.org"
 						className="text-end block text-gray-500"
 					>
 						https://contributors.mug-jp.org/
