@@ -1,24 +1,22 @@
 import { Event } from '@/lib/type';
 import { Link } from 'next-view-transitions';
-
-const formatDate = (date: Date) => {
-    // yyyy/mm/dd
-    return date.toISOString().split('T')[0].replace(/-/g, '/');
-};
+import { formatDate } from '@/lib/utils';
 
 export default function Card({
-    event,
-    content,
+	event,
+	content,
+	href,
 }: {
-    event: Event;
-    content: string;
+	event: Event;
+	content: string;
+	href: string;
 }) {
-    return (
-        <div className="flex flex-col gap-1">
-            <span>{formatDate(event.plannedDate)}</span>
-            <Link href={`/events/${event.slug}/`} className="truncate">
-                {event.title}
-            </Link>
-        </div>
-    );
+	return (
+		<div className="flex flex-col gap-1">
+			<span>{formatDate(event.plannedDate)}</span>
+			<Link href={href} className="truncate">
+				{event.title}
+			</Link>
+		</div>
+	);
 }
