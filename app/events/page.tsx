@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 					</div>
 				</div>
 				<div>
-					<h2 className="text-2xl font-bold mb-4">MUG-JP Spaces (radio)</h2>
+					<h2 className="text-2xl font-bold mb-4">MUG-JP Space (radio)</h2>
 					{spaces}
 				</div>
 			</div>
