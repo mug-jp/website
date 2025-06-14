@@ -1,6 +1,6 @@
 ---
 title: "FOSS4G 2024 Hokkaido"
-plannedDate: 2025-2-10
+plannedDate: 2025-02-10
 url: https://foss4g.hokkaido.jp/2024/
 ---
 
