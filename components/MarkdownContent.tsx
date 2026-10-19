@@ -35,14 +35,26 @@ const Img = (props: ImgProps) => {
 
 export default async function MarkdownContent({
     content,
+    contentDirectory,
 }: {
     content: string;
+    contentDirectory: string;
 }) {
+    // Images live beside the source Markdown, which can differ from the page URL.
+    const imageSource = (src: string | undefined) => {
+        if (!src || /^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(src)) return src;
+        const path = src.startsWith('/') ? src : `${contentDirectory}/${src}`;
+        return `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${path}`;
+    };
+
     return (
         <ReactMarkdown
             remarkPlugins={[remarkFrontmatter, remarkGfm]}
             rehypePlugins={[rehypeRaw]}
-            components={{ code: CodeBlock, img: Img }}
+            components={{
+                code: CodeBlock,
+                img: (props) => <Img {...props} src={imageSource(props.src)} />,
+            }}
         >
             {content}
         </ReactMarkdown>
