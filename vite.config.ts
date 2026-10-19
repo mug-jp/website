@@ -14,10 +14,11 @@ export default defineConfig({
         tailwindcss(),
         tanstackStart({
             prerender: { enabled: true, crawlLinks: false, failOnError: true },
-            pages: (['posts', 'events', 'spaces'] as const).flatMap((collection) =>
-                contentFiles(collection).map(({ slug }) => ({
-                    path: `${collection === 'spaces' ? '/events/spaces' : `/${collection}`}/${slug}/`,
-                })),
+            pages: (['posts', 'events', 'spaces'] as const).flatMap(
+                (collection) =>
+                    contentFiles(collection).map(({ slug }) => ({
+                        path: `${collection === 'spaces' ? '/events/spaces' : `/${collection}`}/${slug}/`,
+                    })),
             ),
         }),
         react(),

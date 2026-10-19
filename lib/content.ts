@@ -16,4 +16,9 @@ export type Event = {
 };
 
 export type RadioEpisode = { title: string; plannedDate: string; url: string };
-export type SiteContent = { posts: Post[]; events: Event[]; spaces: Event[]; radio: RadioEpisode[] };
+export type SiteContent = {
+    posts: Post[];
+    events: Event[];
+    spaces: Event[];
+    radio: RadioEpisode[];
+};

@@ -1,5 +1,12 @@
 {
   "env": { "browser": true, "node": true },
-  "ignorePatterns": ["dist/**", "out/**", ".next/**", ".tanstack/**", "src/routeTree.gen.ts", "next-env.d.ts"],
+  "ignorePatterns": [
+    "dist/**",
+    "out/**",
+    ".next/**",
+    ".tanstack/**",
+    "src/routeTree.gen.ts",
+    "next-env.d.ts"
+  ],
   "rules": { "no-unused-vars": "error" }
 }
