@@ -1,38 +1,42 @@
 {
-  "name": "my-next-app",
+  "name": "mug-jp-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite dev --port 3000",
+    "build": "vite build && npm run test:build",
+    "start": "vite preview --port 3000",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --deny-warnings",
+    "test": "node --import tsx --test lib/*.test.ts",
+    "test:build": "node --import tsx --test tests/build.test.ts"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "next-view-transitions": "^0.3.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-markdown": "^9.0.1",
-    "react-toggle-dark-mode": "^1.1.1",
+    "@tanstack/react-router": "^1.170.45",
+    "@tanstack/react-start": "^1.169.3",
+    "highlight.js": "^11.12.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-markdown": "^10.1.0",
     "rehype-raw": "^7.0.0",
-    "remark-frontmatter": "^5.0.0",
-    "remark-gfm": "^4.0.0",
-    "rss-parser": "^3.13.0"
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "gray-matter": "^4.0.3",
-    "highlight.js": "^11.10.0",
-    "postcss": "^8",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5",
-    "vercel": "^37.2.1"
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.88.0",
+    "rss-parser": "^3.13.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "yaml": "^2.9.1"
   }
 }
