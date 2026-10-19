@@ -1,32 +1,18 @@
-import fs from 'fs';
-
-export const getAllSlug = (dirPath: string) => {
-    return fs.readdirSync(dirPath);
-};
-
-import matter from 'gray-matter';
-
-export function getMarkdown<T>(filePath: string): {
-    data: T;
-    content: string;
-} {
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    return {
-        data: {
-            ...data,
-            // slug = /path/to/file/content.md -> content
-            slug: filePath
-                .replace(/\/readme.md$/, '')
-                .split('/')
-                .pop()!,
-        } as T,
-        content: content,
-    };
+export function formatDate(date: string) {
+    return date.slice(0, 10).replaceAll('-', '/');
 }
 
-export const formatDate = (date: Date) => {
-    // yyyy/mm/dd
-    return date.toISOString().split('T')[0].replace(/-/g, '/');
-};
+export function contentAssetUrl(src: string | undefined, directory: string, base = import.meta.env.BASE_URL) {
+    if (!src || /^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(src)) return src;
+    const path = src.startsWith('/') ? src : `${directory}/${src}`;
+    return `${base.replace(/\/$/, '')}${path}`;
+}
+
+export function pageHead(title: string, description: string) {
+    return {
+        meta: [
+            { title: `${title} - MapLibre User Group Japan` },
+            { name: 'description', content: description },
+        ],
+    };
+}

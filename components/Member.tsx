@@ -1,5 +1,3 @@
-import Image, { StaticImageData } from 'next/image';
-import { Link } from 'next-view-transitions';
 import LogoX from '@/components/LogoX';
 import LogoGithub from '@/components/LogoGithub';
 import LogoLinkedin from '@/components/LogoLinkedin';
@@ -9,29 +7,30 @@ type Props = {
     xUrl: string;
     githubUrl: string;
     linkedinUrl: string;
-    icon: StaticImageData;
+    icon: string;
 };
 
 export default function Member({ name, icon, xUrl, githubUrl, linkedinUrl }: Props) {
     return (
         <div className="flex flex-col justify-center items-center space-y-2">
-            <Image
+            <img
                 src={icon}
                 alt={name}
                 className="rounded-full"
+                width={200}
                 height={200}
             />
             <span className="font-semibold text-sm md:text-base">{name}</span>
             <div className="flex gap-4">
-                <Link href={xUrl}>
+                <a href={xUrl}>
                     <LogoX />
-                </Link>
-                <Link href={githubUrl}>
+                </a>
+                <a href={githubUrl}>
                     <LogoGithub />
-                </Link>
-                <Link href={linkedinUrl}>
+                </a>
+                <a href={linkedinUrl}>
                     <LogoLinkedin />
-                </Link>
+                </a>
             </div>
         </div>
     );

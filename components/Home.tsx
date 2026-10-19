@@ -2,8 +2,6 @@ import DayjournalIcon from '@/assets/dayjournal.jpg';
 import KiguchiIcon from '@/assets/kiguchi.jpg';
 import MugjpLLogo from '@/assets/mugjp.png';
 import Member from './Member';
-import Image from 'next/image';
-import { Link } from 'next-view-transitions';
 import LogoGithub from '@/components/LogoGithub';
 import LogoConnpass from '@/assets/logo_connpass.png';
 import LogoQiita from '@/assets/logo_qiita.png';
@@ -13,30 +11,30 @@ export default function Page() {
 	return (
 		<main className="p-4 md:p-8 space-y-20">
 			<div className="flex flex-col items-center justify-center gap-2">
-				<Image
+				<img
 					src={MugjpLLogo}
 					alt="MapLibre User Group Japan"
-					className="rounded-md"
+					className="rounded-md h-auto max-w-full"
 					width={480}
 				/>
-				<div className="w-80% md:w-[480px] text-center">
+				<div className="w-full md:w-[480px] text-center">
 					MapLibre User Group Japan (MUG-JP)は、
-					<Link href="https://maplibre.org/">MapLibre</Link>
+					<a href="https://maplibre.org/">MapLibre</a>
 					エコシステムの日本での普及を目指し2023年に設立されました。
 				</div>
 				<div className="flex gap-4 justify-center items-center">
-					<Link href="https://www.github.com/mug-jp">
+					<a href="https://www.github.com/mug-jp">
 						<LogoGithub />
-					</Link>
-					<Link href="https://mug-jp.connpass.com/">
-						<Image src={LogoConnpass} alt="Connpass" width={24} height={24} />
-					</Link>
-					<Link href="https://qiita.com/organizations/mug-jp">
-						<Image src={LogoQiita} alt="Qiita" width={20} height={20} />
-					</Link>
-					<Link href="https://dev.to/mug-jp">
+					</a>
+					<a href="https://mug-jp.connpass.com/">
+						<img src={LogoConnpass} alt="Connpass" width={24} height={24} />
+					</a>
+					<a href="https://qiita.com/organizations/mug-jp">
+						<img src={LogoQiita} alt="Qiita" width={20} height={20} />
+					</a>
+					<a href="https://dev.to/mug-jp">
 						<LogoDevto />
-					</Link>
+					</a>
 				</div>
 			</div>
 			<div className="flex flex-col items-center justify-center gap-8">
@@ -62,15 +60,16 @@ export default function Page() {
 				<h1 className="text-3xl font-bold">Contributors</h1>
 				<div className="w-full max-w-[800px] h-[400px] md:h-[600px]">
 					<iframe
+						title="MUG-JP contributors"
 						className="w-full h-full rounded-md"
 						src="https://contributors.mug-jp.org/?logo=false"
 					></iframe>
-					<Link
+					<a
 						href="https://contributors.mug-jp.org"
 						className="text-end block text-gray-500"
 					>
 						https://contributors.mug-jp.org/
-					</Link>
+					</a>
 				</div>
 			</div>
 		</main>

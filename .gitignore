@@ -38,3 +38,8 @@ next-env.d.ts
 # wrangler files
 .wrangler
 .dev.vars
+
+# TanStack Start / Vite
+/dist/
+/.tanstack/
+/src/routeTree.gen.ts

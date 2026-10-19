@@ -1,10 +1,10 @@
 import ReactMarkdown, { ExtraProps } from 'react-markdown';
-import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import './MarkdownContent.css';
-import hljs from 'highlight.js';
-import { ClassAttributes, HTMLAttributes, ImgHTMLAttributes } from 'react';
+import hljs from 'highlight.js/lib/common';
+import type { ClassAttributes, HTMLAttributes, ImgHTMLAttributes } from 'react';
+import { contentAssetUrl } from '@/lib/utils';
 
 type CodeBlockProps = ClassAttributes<HTMLElement> &
     HTMLAttributes<HTMLElement> &
@@ -13,7 +13,10 @@ type CodeBlockProps = ClassAttributes<HTMLElement> &
 const CodeBlock = ({ className, children }: CodeBlockProps) => {
     const match = /language-(\w+)/.exec(className || '');
     const lang = match && match[1] ? match[1] : '';
-    const html = hljs.highlightAuto(children!.toString(), [lang]).value;
+    const code = String(children ?? '');
+    const html = lang && hljs.getLanguage(lang)
+        ? hljs.highlight(code, { language: lang }).value
+        : hljs.highlightAuto(code).value;
 
     return (
         <code
@@ -27,33 +30,26 @@ type ImgProps = ClassAttributes<HTMLImageElement> &
     ImgHTMLAttributes<HTMLImageElement> &
     ExtraProps;
 
-const Img = (props: ImgProps) => {
+const Img = ({ node: _node, ...props }: ImgProps) => {
     return (
         <img {...props} loading="lazy" decoding="async" />
     );
 };
 
-export default async function MarkdownContent({
+export default function MarkdownContent({
     content,
     contentDirectory,
 }: {
     content: string;
     contentDirectory: string;
 }) {
-    // Images live beside the source Markdown, which can differ from the page URL.
-    const imageSource = (src: string | undefined) => {
-        if (!src || /^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(src)) return src;
-        const path = src.startsWith('/') ? src : `${contentDirectory}/${src}`;
-        return `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${path}`;
-    };
-
     return (
         <ReactMarkdown
-            remarkPlugins={[remarkFrontmatter, remarkGfm]}
+            remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}
             components={{
                 code: CodeBlock,
-                img: (props) => <Img {...props} src={imageSource(props.src)} />,
+                img: (props) => <Img {...props} src={contentAssetUrl(typeof props.src === 'string' ? props.src : undefined, contentDirectory)} />,
             }}
         >
             {content}

@@ -1,5 +1,29 @@
 # MUG-JPのWebサイト
 
+## 開発
+
+Node.js 24とnpmを使用します（`.node-version`参照）。
+
+```sh
+npm ci
+npm run dev
+```
+
+開発サーバーは `http://localhost:3000` で起動します。
+TanStack Start / React / Vite / Tailwind CSSを使用し、記事とRSSをビルド時に取り込んで全ページを事前生成します。公開には `dist/client/` のみを使用し、実行時のサーバーは不要です。
+
+```sh
+npm run lint
+npm test
+npm run build
+npm run typecheck
+npm start
+```
+
+`npm run build` は全ページの生成後に、記事の出力漏れ・ローカルURL・404の静的出力を検査します。
+`npm start` は生成したサイトのプレビューです。型チェックに必要なルート定義は `npm run dev` または `npm run build` で自動生成されます。
+Markdownの変更は開発サーバーに反映されます。RSSは起動・ビルドごとに取得するため、ネットワーク接続が必要です。取得できない場合は不完全な記事一覧を公開しないようビルドを失敗させます。
+
 ## 記事の書き方
 
 - `public`以下に`events`と`posts`というディレクトリがあります。その中にフォルダを作成することで記事を追加できます。
@@ -47,7 +71,8 @@ publishedAt: 2024-06-26
 
 ```sh
 npm ci
-NEXT_PUBLIC_BASE_PATH=/website npm run build
+BASE_PATH=/website npm run build
+BASE_PATH=/website npm start
 ```
 
-生成先は `out/` です。通常の `npm run dev` / `npm run build` ではルートパスで動作します。
+生成先は `dist/client/` です。通常の `npm run dev` / `npm run build` ではルートパスで動作します。
