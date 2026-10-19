@@ -47,6 +47,8 @@ MUG-JP Official Web Site
 
 ## 登壇者
 
+<img src="https://pbs.twimg.com/profile_images/1370737653579063300/3RgYVbio_400x400.jpg" alt="湯谷啓明のアイコン" width="150px">
+
 #### MapLibre でも GeoArrow を使いたいのでシェーダーを書いてみた
 
 **湯谷啓明（Yutani Hiroaki）**
@@ -56,6 +58,8 @@ MUG-JP Official Web Site
 好きな言語は R と忍殺語です。
 
 ---
+
+<img src="https://media.connpass.com/thumbs/91/04/91045057c0d96055eed4d1a7be8bf6e2.png" alt="井関竜太郎のアイコン" width="150px">
 
 #### Flutter×MapLibreでやってみたこととこれからやりたいこと
 
@@ -67,6 +71,8 @@ Flutterを使用したアプリ開発が大好きな社会人文系大学院生�
 
 ---
 
+<img src="https://avatars.githubusercontent.com/u/20744195?v=4" alt="井口奏大のアイコン" width="150px">
+
 #### DEMのRGBエンコード手法をおさらいする（TerrainRGB/Terrarium/地理院標高タイル）
 
 **井口奏大（Iguchi Kanahiro）**
@@ -76,6 +82,8 @@ MapLibre User Group Japan
 ラスターが好きです。 #位置エン本 #位置ベロ本 #実践QGIS
 
 ---
+
+<img src="https://pbs.twimg.com/profile_images/2355087053/upyx41c8dxcni00k9kf4_400x400.jpeg" alt="坂ノ下勝幸のアイコン" width="150px">
 
 #### 万博マニアックマップを支えるオープンデータとその裏側
 
