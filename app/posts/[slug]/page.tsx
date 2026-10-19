@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 					</span>
 				))}
 			</div>
-			<MarkdownContent content={content} />
+			<MarkdownContent content={content} contentDirectory={`/posts/${params.slug}`} />
 		</div>
 	);
 }
