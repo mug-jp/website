@@ -1,10 +1,10 @@
 pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
 }
 code.hljs {
-  padding: 3px 5px
+    padding: 3px 5px;
 }
 /*
 
@@ -12,28 +12,28 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
 
 */
 .hljs {
-  background: #1d1f21;
-  color: #c5c8c6
+    background: #1d1f21;
+    color: #c5c8c6;
 }
 /*selection color*/
 .hljs::selection,
 .hljs span::selection {
-  background: #373b41
+    background: #373b41;
 }
 .hljs::-moz-selection,
 .hljs span::-moz-selection {
-  background: #373b41
+    background: #373b41;
 }
 /*color: fg_yellow*/
 .hljs-title,
 .hljs-name {
-  color: #f0c674
+    color: #f0c674;
 }
 /*color: fg_comment*/
 .hljs-comment,
 .hljs-meta,
 .hljs-meta .hljs-keyword {
-  color: #707880
+    color: #707880;
 }
 /*color: fg_red*/
 .hljs-number,
@@ -41,7 +41,7 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
 .hljs-literal,
 .hljs-deletion,
 .hljs-link {
-  color: #cc6666
+    color: #cc6666;
 }
 /*color: fg_green*/
 .hljs-string,
@@ -50,27 +50,27 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
 .hljs-regexp,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #b5bd68
+    color: #b5bd68;
 }
 /*color: fg_purple*/
 .hljs-attribute,
 .hljs-code,
 .hljs-selector-id {
-  color: #b294bb
+    color: #b294bb;
 }
 /*color: fg_blue*/
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-bullet,
 .hljs-tag {
-  color: #81a2be
+    color: #81a2be;
 }
 /*color: fg_aqua*/
 .hljs-subst,
 .hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
-  color: #8abeb7
+    color: #8abeb7;
 }
 /*color: fg_orange*/
 .hljs-type,
@@ -78,72 +78,72 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
 .hljs-quote,
 .hljs-section,
 .hljs-selector-class {
-  color: #de935f
+    color: #de935f;
 }
 .hljs-emphasis {
-  font-style: italic
+    font-style: italic;
 }
 .hljs-strong {
-  font-weight: bold
+    font-weight: bold;
 }
 
 .container {
-  max-width: 750px;
-  padding: 12px 12px 0;
-  margin: 0 auto;
+    max-width: 750px;
+    padding: 12px 12px 0;
+    margin: 0 auto;
 
-  & h1 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 24px;
-    font-weight: bold;
-    border-bottom: solid 2px gray;
-  }
+    & h1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: solid 2px gray;
+    }
 
-  & h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 21px;
-    font-weight: bold;
-    border-bottom: solid 1px gray;
-  }
+    & h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 21px;
+        font-weight: bold;
+        border-bottom: solid 1px gray;
+    }
 
-  & h3 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 18px;
-    font-weight: bold;
-  }
+    & h3 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 18px;
+        font-weight: bold;
+    }
 
-  & p {
-    margin: 6px 0;
-  }
+    & p {
+        margin: 6px 0;
+    }
 
-  & a {
-    color: #0af;
-    transition: opacity 0.1s linear;
-  }
+    & a {
+        color: #0af;
+        transition: opacity 0.1s linear;
+    }
 
-  & a:hover {
-    opacity: 0.5;
-  }
+    & a:hover {
+        opacity: 0.5;
+    }
 
-  & ul {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-left: 12px;
-    list-style-position: inside;
-  }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-left: 12px;
+        list-style-position: inside;
+    }
 
-  & table {
-    font-size: small;
-  }
+    & table {
+        font-size: small;
+    }
 
-  & th,
-  & td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-  }
+    & th,
+    & td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
 }

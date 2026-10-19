@@ -14,9 +14,10 @@ const CodeBlock = ({ className, children }: CodeBlockProps) => {
     const match = /language-(\w+)/.exec(className || '');
     const lang = match && match[1] ? match[1] : '';
     const code = String(children ?? '');
-    const html = lang && hljs.getLanguage(lang)
-        ? hljs.highlight(code, { language: lang }).value
-        : hljs.highlightAuto(code).value;
+    const html =
+        lang && hljs.getLanguage(lang)
+            ? hljs.highlight(code, { language: lang }).value
+            : hljs.highlightAuto(code).value;
 
     return (
         <code
@@ -31,9 +32,7 @@ type ImgProps = ClassAttributes<HTMLImageElement> &
     ExtraProps;
 
 const Img = ({ node: _node, ...props }: ImgProps) => {
-    return (
-        <img {...props} loading="lazy" decoding="async" />
-    );
+    return <img {...props} loading="lazy" decoding="async" />;
 };
 
 export default function MarkdownContent({
@@ -49,7 +48,17 @@ export default function MarkdownContent({
             rehypePlugins={[rehypeRaw]}
             components={{
                 code: CodeBlock,
-                img: (props) => <Img {...props} src={contentAssetUrl(typeof props.src === 'string' ? props.src : undefined, contentDirectory)} />,
+                img: (props) => (
+                    <Img
+                        {...props}
+                        src={contentAssetUrl(
+                            typeof props.src === 'string'
+                                ? props.src
+                                : undefined,
+                            contentDirectory,
+                        )}
+                    />
+                ),
             }}
         >
             {content}

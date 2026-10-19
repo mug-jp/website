@@ -1,0 +1,6 @@
+# Wait seven days before installing newly published dependency versions.
+minimumReleaseAge: 10080
+minimumReleaseAgeStrict: true
+allowBuilds:
+  esbuild: true
+  fsevents: false

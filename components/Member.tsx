@@ -10,7 +10,13 @@ type Props = {
     icon: string;
 };
 
-export default function Member({ name, icon, xUrl, githubUrl, linkedinUrl }: Props) {
+export default function Member({
+    name,
+    icon,
+    xUrl,
+    githubUrl,
+    linkedinUrl,
+}: Props) {
     return (
         <div className="flex flex-col justify-center items-center space-y-2">
             <img
