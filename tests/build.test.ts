@@ -27,7 +27,7 @@ test('every article and listing has prerendered content and valid local URLs', (
         assert.match(
             html,
             page === ''
-                ? /Charter Member/
+                ? /Organizers/
                 : page === 'posts'
                   ? /class="truncate"/
                   : /(?:<h[12]|Published At:)/,
