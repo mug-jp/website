@@ -1,5 +1,8 @@
 import DayjournalIcon from '@/assets/dayjournal.jpg';
 import KiguchiIcon from '@/assets/kiguchi.jpg';
+import AsahinaIcon from '@/assets/asahina820.jpg';
+import SmellmanIcon from '@/assets/smellman.jpg';
+import KeichanIcon from '@/assets/keichan34.jpg';
 import MugjpLLogo from '@/assets/mugjp.png';
 import Member from './Member';
 import LogoGithub from '@/components/LogoGithub';
@@ -48,10 +51,12 @@ export default function Page() {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-8">
-                <h1 className="text-3xl font-bold">Charter Member</h1>
-                <div className="grid grid-cols-2 gap-10">
+                <h1 className="text-3xl font-bold">Organizers</h1>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 md:gap-x-10 md:gap-y-12">
                     <Member
                         name="Yasunori Kirimoto"
+                        caption="Founding Member · 2023"
+                        founding
                         icon={DayjournalIcon}
                         xUrl="https://x.com/dayjournal_nori"
                         githubUrl="https://github.com/dayjournal"
@@ -59,10 +64,36 @@ export default function Page() {
                     />
                     <Member
                         name="Kanahiro Iguchi"
+                        caption="Founding Member · 2023"
+                        founding
                         icon={KiguchiIcon}
                         xUrl="https://x.com/kanahiro_iguchi"
                         githubUrl="https://github.com/Kanahiro"
                         linkedinUrl="https://www.linkedin.com/in/kanahiro-iguchi-b78b96122/"
+                    />
+                    <Member
+                        name="Keita Kobayashi"
+                        caption="Organizer · since 2026"
+                        icon={KeichanIcon}
+                        xUrl="https://x.com/sleepy_keita"
+                        githubUrl="https://github.com/keichan34/"
+                        linkedinUrl="https://www.linkedin.com/in/keitaroh-kobayashi/"
+                    />
+                    <Member
+                        name="Taro Matsuzawa"
+                        caption="Organizer · since 2026"
+                        icon={SmellmanIcon}
+                        xUrl="https://x.com/smellman"
+                        githubUrl="https://github.com/smellman"
+                        linkedinUrl="https://www.linkedin.com/in/tmatsuzawa/"
+                    />
+                    <Member
+                        name="Asahina"
+                        caption="Organizer · since 2026"
+                        icon={AsahinaIcon}
+                        xUrl="https://x.com/asahina820"
+                        githubUrl="https://github.com/asahina820"
+                        linkedinUrl="https://www.linkedin.com/in/asahina820/"
                     />
                 </div>
             </div>
