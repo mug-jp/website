@@ -3,6 +3,7 @@ import KiguchiIcon from '@/assets/kiguchi.jpg';
 import AsahinaIcon from '@/assets/asahina820.jpg';
 import SmellmanIcon from '@/assets/smellman.jpg';
 import KeichanIcon from '@/assets/keichan34.jpg';
+import YuisekiIcon from '@/assets/yuiseki.jpg';
 import MugjpLLogo from '@/assets/mugjp.png';
 import Member from './Member';
 import LogoGithub from '@/components/LogoGithub';
@@ -94,6 +95,14 @@ export default function Page() {
                         xUrl="https://x.com/asahina820"
                         githubUrl="https://github.com/asahina820"
                         linkedinUrl="https://www.linkedin.com/in/asahina820/"
+                    />
+                    <Member
+                        name="Yui Matsumura"
+                        caption="Organizer · since 2026"
+                        icon={YuisekiIcon}
+                        xUrl="https://x.com/yuiseki_"
+                        githubUrl="https://github.com/yuiseki"
+                        linkedinUrl="https://www.linkedin.com/in/yuiseki/"
                     />
                 </div>
             </div>
